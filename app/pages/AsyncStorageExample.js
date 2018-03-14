@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import { Text , Image , StyleSheet , AsyncStorage , TouchableOpacity } from 'react-native';
 import { Header , Container , Content , Card , CardItem , Body } from 'native-base';
-export default class About extends Component {
+export default class AsyncStorageExample extends Component {
   
   
   
