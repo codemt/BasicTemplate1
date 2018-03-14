@@ -9,18 +9,18 @@ render() {
 
             return (
 
-                <Footer>
-                      <FooterTab>
-                            <Button active onPress={Actions.home}>
-                                <Icon name='home'/>
+                <Footer >
+                      <FooterTab style={{backgroundColor: '#fff'}}>
+                            <Button  onPress={Actions.home}>
+                                <Icon name='ios-home'/>
                                 <Text> Home </Text>
                             </Button>
                             <Button  onPress={Actions.news}>
-                                <Icon name='people'/>
-                                <Text> News  </Text>
+                                <Icon name='ios-water'/>
+                                <Text> Our Blog  </Text>
                             </Button>
                             <Button onPress={Actions.AboutUs}>
-                                <Icon name='settings'/>
+                                <Icon name='ios-body'/>
                                 <Text> About Us </Text>
                             </Button>
                        </FooterTab>
