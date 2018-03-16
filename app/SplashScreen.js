@@ -21,7 +21,7 @@ const styles = StyleSheet.create({
 
         container: {
 
-                backgroundColor:'green',
+                backgroundColor:'blue',
                 flex: 1,
                 alignItems:'center',
                 justifyContent:'center'
@@ -32,7 +32,8 @@ const styles = StyleSheet.create({
         title: {
 
                 fontWeight:'bold',
-                fontSize:18    
+                fontSize:18,
+                color:'white' 
 
 
 

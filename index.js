@@ -1,9 +1,6 @@
 import React , { Component} from 'react';
 import { AppRegistry } from 'react-native';
 import App from './App';
-import AppHeader from './app/AppHeader';
-import AppFooter from './app/AppFooter';
-import AppBody from './app/AppBody';
 import SplashScreen from './app/SplashScreen';
 class Main extends Component{
     constructor(props){
