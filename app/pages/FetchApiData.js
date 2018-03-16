@@ -3,7 +3,6 @@ import {View,StyleSheet,TouchableOpacity,ScrollView,Dimensions,FlatList} from "r
 import { Container, Header, Content, Card, CardItem, Text, Body } from 'native-base';
 var window= Dimensions.get('window');
 
-
 var obj;
 class FetchApiData extends Component {
 
@@ -23,11 +22,13 @@ class FetchApiData extends Component {
       {
         console.log('called');
 
-               fetch('https://gist.githubusercontent.com/mithilesh-tarkar/b8fbaaf4323ae6bc8ef00eda83113b24/raw/50839a08ab7ed8f645b3ecc7672b53b004a18223/sportsdata1')
+               fetch('http://101musicalsacademy.in/wp-json/wp/v2/pages?content')
              .then((response) => response.json())
              .then((responseJson) => {
                console.log(responseJson);
-               this.setState({data : responseJson.Cricket});
+               this.setState({data : responseJson["0"]});
+               console.log(responseJson["0"]);
+               console.log(responseJson["0"].author);
 
              })
 
@@ -43,13 +44,15 @@ class FetchApiData extends Component {
 
       }
 
+      
 
       _renderItem = ({item}) => (
 
 
         <View>
-            <Text style={styles.header}>{item.date}</Text>
-            <Text style={styles.header}>{item.result}</Text>
+            <Text style={styles.header}>{item.author}</Text>
+            <Text style={styles.header}>{item.comment_status}</Text>
+            
         </View>
             
           
@@ -61,11 +64,13 @@ class FetchApiData extends Component {
       <ScrollView showsVerticalScrollIndicator={false} style={styles.container}>
         <Content>
 
+            
+
 
           <FlatList
           data={this.state.data}
           renderItem={this._renderItem}
-          keyExtractor={item => item.id}
+          keyExtractor={item => item}
           />
 
         </Content>
