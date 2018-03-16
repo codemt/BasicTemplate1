@@ -7,11 +7,32 @@ import AppBody from './app/AppBody';
 import { Actions , Router , Scene } from 'react-native-router-flux';
 import News from './app/pages/News';
 import AboutUs from './app/pages/About';
+import ApiData from './app/pages/FetchApiData';
+import SplashScreen from './app/SplashScreen';
 export default class BasicTemplate1 extends Component {
+
+
+      constructor(props){
+
+
+          super(props);
+          this.state = { currentScreen : 'SplashScreen'};
+          console.log('Start Doing Some Tasks')
+          setTimeout(()=>{
+              console.log('Done some tasks for 3 seconds')
+              this.setState({currentScreen:'AppHeader'})
+          },3000)
+
+      }
 
 
 
   render() {
+
+          const {currentScreen} = this.state;
+          let mainScreen = currentScreen === 'SplashScreen' ? <SplashScreen /> : <AppHeader />;
+          return mainScreen;
+
             return (
 
                         <Container>
@@ -29,7 +50,7 @@ export default class BasicTemplate1 extends Component {
                           title="news"
                           />
                         <Scene key="AboutUs" component={AboutUs} title="aboutus"/>
-                        <Scene key="AboutUs" component={AboutUs} title="aboutus"/>
+                        <Scene key="ApiData" component={ApiData} title="ApiData"/>
                       </Scene>
                     </Router>
 
