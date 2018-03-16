@@ -23,8 +23,8 @@ render() {
                                 <Icon name='ios-body'/>
                                 <Text> About Us </Text>
                             </Button>
-                            <Button onPress={Actions.AboutUs}>
-                                <Icon name='ios-body'/>
+                            <Button onPress={Actions.ApiData}>
+                                <Icon name='ios-download-outline'/>
                                 <Text> Api Data </Text>
                             </Button>
                        </FooterTab>
