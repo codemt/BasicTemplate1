@@ -23,6 +23,10 @@ render() {
                                 <Icon name='ios-body'/>
                                 <Text> About Us </Text>
                             </Button>
+                            <Button onPress={Actions.AboutUs}>
+                                <Icon name='ios-body'/>
+                                <Text> Api Data </Text>
+                            </Button>
                        </FooterTab>
 
                 </Footer>

@@ -16,7 +16,7 @@ export default class BasicTemplate1 extends Component {
 
                         <Container>
                           <Router>
-                      <Scene hideNavBar>
+                      <Scene key="root" hideNavBar>
                         <Scene
                           key="home"
                           component={AppHeader}
@@ -28,6 +28,7 @@ export default class BasicTemplate1 extends Component {
                           component={News}
                           title="news"
                           />
+                        <Scene key="AboutUs" component={AboutUs} title="aboutus"/>
                         <Scene key="AboutUs" component={AboutUs} title="aboutus"/>
                       </Scene>
                     </Router>
