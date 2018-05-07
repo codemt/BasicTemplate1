@@ -22,13 +22,13 @@ class FetchApiData extends Component {
       {
         console.log('called');
 
-               fetch('http://101musicalsacademy.in/wp-json/wp/v2/pages?content')
+               fetch('https://www.hnrtech.com/schedules.json')
              .then((response) => response.json())
              .then((responseJson) => {
                console.log(responseJson);
-               this.setState({data : responseJson["0"]});
-               console.log(responseJson["0"]);
-               console.log(responseJson["0"].author);
+               this.setState({data : responseJson.Throwball});
+               console.log(responseJson);
+               console.log(responseJson.Throwball);
 
              })
 
@@ -50,8 +50,8 @@ class FetchApiData extends Component {
 
 
         <View>
-            <Text style={styles.header}>{item.author}</Text>
-            <Text style={styles.header}>{item.comment_status}</Text>
+            <Text style={styles.header}>{item.id}</Text>
+            <Text style={styles.header}>{item.Teams.t1}</Text>
             
         </View>
             
